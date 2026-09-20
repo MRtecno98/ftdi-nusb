@@ -1389,7 +1389,7 @@ fn detect_chip_type(bcd: u16, has_serial: bool) -> ChipType {
         0x0200 => ChipType::Am,
         0x0500 => ChipType::Ft2232C,
         0x0600 => ChipType::Ft232R,
-        0x0700 => ChipType::Ft2232H,
+        0x0700 | 0x3000 => ChipType::Ft2232H,
         0x0800 => ChipType::Ft4232H,
         0x0900 => ChipType::Ft232H,
         0x1000 => ChipType::Ft230X,
